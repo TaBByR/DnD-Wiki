@@ -24,6 +24,7 @@ public class Adventure extends AbstractModel{
         this.title = title;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
@@ -32,6 +33,7 @@ public class Adventure extends AbstractModel{
         this.description = description;
     }
 
+    @Override
     public String getImages() {
         return images;
     }

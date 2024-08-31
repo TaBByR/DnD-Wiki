@@ -29,7 +29,7 @@ CREATE TABLE adventure (
 
 
 INSERT INTO author (name, description, images)
-VALUES ('Wizards of the Coast', 'Gary Gygax was an American', 'gygax_image.jpg');
+VALUES ('Wizards of the Coast', 'authors/Wizards of the Coast/description', 'authors/Wizards of the Coast/images');
 
 
 INSERT INTO adventure (title, description, images, type, stock, author_id)

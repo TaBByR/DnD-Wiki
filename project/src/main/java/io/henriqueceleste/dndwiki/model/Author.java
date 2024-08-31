@@ -22,4 +22,18 @@ public class Author extends AbstractModel {
             fetch = FetchType.EAGER
     )
     private List<Adventure> adventures = new ArrayList<>();
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getImages() {
+        return this.images;
+    }
+
+    @Override
+    public String getDescription() {
+        return this.description;
+    }
 }

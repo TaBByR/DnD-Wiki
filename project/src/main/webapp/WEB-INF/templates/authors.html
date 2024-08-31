@@ -11,22 +11,22 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="p-3 mb-2 bg-white text-dark">
-            <h1 class="text-center display-1">Adventures</h1>
+            <h1 class="text-center display-1">Authors</h1>
         </div>
-        <div th:switch="${not #lists.isEmpty(adventures)}">
+        <div th:switch="${not #lists.isEmpty(authors)}">
             <div th:case="${true}" class="card-deck">
-                <div class="col-lg-4 col-md-6 mb-4" th:each="adventure : ${adventures}">
+                <div class="col-lg-4 col-md-6 mb-4" th:each="author : ${authors}">
                     <div class="card h-100">
-                        <img class="card-img-top" th:src="${adventure.images[0]}" alt="Adventure Image"/>
+                        <img class="card-img-top" th:src="${author.images[0]}" alt="Author Image"/>
                         <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title mx-auto mb-4" th:text="${adventure.title}">Adventure Title</h5>
-                            <p class="card-text mt-auto" th:text="${adventure.description}">Adventure Description</p>
+                            <h5 class="card-title mx-auto mb-4" th:text="${author.name}">Author Title</h5>
+                            <p class="card-text mt-auto" th:text="${author.description}">Author Description</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div th:case="${false}">
-                <h1 class="text-center">No Adventures</h1>
+                <h1 class="text-center">No Authors</h1>
             </div>
         </div>
     </div>

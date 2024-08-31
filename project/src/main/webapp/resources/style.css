@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'augustaregular';
+    src: url('augusta-webfont.woff2') format('woff2'),
+         url('augusta-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1 {
+    font-family: "augustaregular";
+    color: red;
+}
+
 .full-page-bg {
     background-size: cover; /* Ensure the background image covers the entire page */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -5,24 +19,4 @@
     background-attachment: fixed; /* Fix the background image in place while scrolling */
     height: 100vh; /* Set the height to the full viewport height */
     width: 100vw; /* Set the width to the full viewport width */
-}
-
-.card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Make sure the card body takes full height of the card */
-}
-
-.card-title-container {
-    display: flex;
-    align-items: center; /* Align items (title) vertically in the center */
-    justify-content: center; /* Optional: center the title text horizontally */
-    height: 100%; /* Full height to allow vertical centering */
-    width: 100%; /* Full width to allow horizontal centering */
-}
-
-.card-title {
-    margin-bottom: 0; /* Remove default margin-bottom from Bootstrap card-title */
-    text-align: center; /* Center the title text horizontally */
-    width: 100%; /* Ensure the title text spans the full width */
 }

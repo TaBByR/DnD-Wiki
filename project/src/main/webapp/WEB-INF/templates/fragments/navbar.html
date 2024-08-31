@@ -1,0 +1,18 @@
+<nav xmlns:th="http://www.thymeleaf.org" th:fragment="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" th:href="@{/adventures}">
+            <img th:src="@{resources/dnd-icon.png}" class="img-responsive" width="50">
+            D&D Wiki
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link text-dark" th:href="@{/adventures}">Adventures</a>
+                <a class="nav-link text-dark" th:href="@{/authors}">Authors</a>
+            </div>
+        </div>
+    </div>
+</nav>
