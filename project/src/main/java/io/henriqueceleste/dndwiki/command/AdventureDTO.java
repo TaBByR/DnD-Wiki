@@ -1,19 +1,16 @@
-package io.henriqueceleste.dndwiki.model;
+package io.henriqueceleste.dndwiki.command;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import io.henriqueceleste.dndwiki.model.Author;
 
-@Entity
-@Table(name = "adventure")
-public class Adventure extends AbstractModel{
+import java.util.ArrayList;
+import java.util.List;
+
+public class AdventureDTO {
     private String title;
-    private String description;
-    private String images;
     private String type;
     private Integer stock;
-
-    @ManyToOne
+    private List<String> images = new ArrayList<>();
+    private String description;
     private Author author;
 
     public String getTitle() {
@@ -22,22 +19,6 @@ public class Adventure extends AbstractModel{
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImages() {
-        return images;
-    }
-
-    public void setImages(String images) {
-        this.images = images;
     }
 
     public String getType() {
@@ -56,6 +37,22 @@ public class Adventure extends AbstractModel{
         this.stock = stock;
     }
 
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Author getAuthor() {
         return author;
     }
@@ -66,12 +63,12 @@ public class Adventure extends AbstractModel{
 
     @Override
     public String toString() {
-        return "Adventure{" +
+        return "AdventureDTO{" +
                 "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", images='" + images + '\'' +
                 ", type='" + type + '\'' +
                 ", stock=" + stock +
+                ", images=" + images +
+                ", description='" + description + '\'' +
                 ", author=" + author +
                 '}';
     }

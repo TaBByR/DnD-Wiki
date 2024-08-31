@@ -29,9 +29,11 @@ CREATE TABLE adventure (
 
 
 INSERT INTO author (name, description, images)
-VALUES ('Gary Gygax', 'Gary Gygax was an American', 'gygax_image.jpg');
+VALUES ('Wizards of the Coast', 'Gary Gygax was an American', 'gygax_image.jpg');
 
 
--- Insert an adventure into the adventure table
 INSERT INTO adventure (title, description, images, type, stock, author_id)
-VALUES ('The Temple of Elemental Evil', 'The Temple of Elemental Evil is a', 'temple_of_elemental_evil.jpg', 'Adventure Module', 100, (SELECT id FROM author WHERE name = 'Gary Gygax'));
+VALUES
+('Dragon of Icespire Peak', 'adventures/Dragon of Icespire Peak/description', 'adventures/Dragon of Icespire Peak/images', 'Official', 100, (SELECT id FROM author WHERE name = 'Wizards of the Coast')),
+("Curse of Strahd", "adventures/Curse of Strahd/description", "adventures/Curse of Strahd/images", "Official", 100, (SELECT id FROM author WHERE name = 'Wizards of the Coast'))
+;
